@@ -1,0 +1,323 @@
+{
+  "data": [
+    {
+      "id": "Pigovsky-older",
+      "links": {
+        "self": "/families/Pigovsky-older"
+      },
+      "relationships": {
+        "father": {
+          "data": {
+            "id": "Roman-older",
+            "type": "people"
+          },
+          "links": {
+            "related": "/families/Pigovsky-older/father"
+          }
+        },
+        "mother": {
+          "data": {
+            "id": "Wira",
+            "type": "people"
+          },
+          "links": {
+            "related": "/families/Pigovsky-older/mother"
+          }
+        }
+      },
+      "type": "families"
+    },
+    {
+      "id": "Polischtschuk",
+      "links": {
+        "self": "/families/Polischtschuk"
+      },
+      "relationships": {
+        "father": {
+          "data": {
+            "id": "Bogdan",
+            "type": "people"
+          },
+          "links": {
+            "related": "/families/Polischtschuk/father"
+          }
+        },
+        "mother": {
+          "data": {
+            "id": "Iryna",
+            "type": "people"
+          },
+          "links": {
+            "related": "/families/Polischtschuk/mother"
+          }
+        }
+      },
+      "type": "families"
+    },
+    {
+      "id": "Pigovsky-younger",
+      "links": {
+        "self": "/families/Pigovsky-younger"
+      },
+      "relationships": {
+        "father": {
+          "data": {
+            "id": "Yuriy",
+            "type": "people"
+          },
+          "links": {
+            "related": "/families/Pigovsky-younger/father"
+          }
+        },
+        "mother": {
+          "data": {
+            "id": "Maria",
+            "type": "people"
+          },
+          "links": {
+            "related": "/families/Pigovsky-younger/mother"
+          }
+        }
+      },
+      "type": "families"
+    }
+  ],
+  "included": [
+    {
+      "id": "Bogdan",
+      "links": {
+        "self": "/people/Bogdan"
+      },
+      "relationships": {
+        "children": {
+          "data": [
+            {
+              "id": "Sofia",
+              "type": "people"
+            }
+          ],
+          "links": {
+            "related": "/people/Bogdan/children"
+          }
+        },
+        "tasks": {
+          "links": {
+            "related": "/people/Bogdan/tasks"
+          }
+        }
+      },
+      "type": "people"
+    },
+    {
+      "id": "Wira",
+      "links": {
+        "self": "/people/Wira"
+      },
+      "relationships": {
+        "children": {
+          "data": [
+            {
+              "id": "Iryna",
+              "type": "people"
+            },
+            {
+              "id": "Yuriy",
+              "type": "people"
+            }
+          ],
+          "links": {
+            "related": "/people/Wira/children"
+          }
+        },
+        "tasks": {
+          "links": {
+            "related": "/people/Wira/tasks"
+          }
+        }
+      },
+      "type": "people"
+    },
+    {
+      "id": "Eva",
+      "links": {
+        "self": "/people/Eva"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "/people/Eva/children"
+          }
+        },
+        "tasks": {
+          "links": {
+            "related": "/people/Eva/tasks"
+          }
+        }
+      },
+      "type": "people"
+    },
+    {
+      "id": "Iryna",
+      "links": {
+        "self": "/people/Iryna"
+      },
+      "relationships": {
+        "children": {
+          "data": [
+            {
+              "id": "Sofia",
+              "type": "people"
+            }
+          ],
+          "links": {
+            "related": "/people/Iryna/children"
+          }
+        },
+        "tasks": {
+          "links": {
+            "related": "/people/Iryna/tasks"
+          }
+        }
+      },
+      "type": "people"
+    },
+    {
+      "id": "Yuriy",
+      "links": {
+        "self": "/people/Yuriy"
+      },
+      "relationships": {
+        "children": {
+          "data": [
+            {
+              "id": "Eva",
+              "type": "people"
+            },
+            {
+              "id": "Roman-younger",
+              "type": "people"
+            }
+          ],
+          "links": {
+            "related": "/people/Yuriy/children"
+          }
+        },
+        "tasks": {
+          "data": [
+            {
+              "id": "bring Eva to Kindergarten",
+              "type": "tasks"
+            }
+          ],
+          "links": {
+            "related": "/people/Yuriy/tasks"
+          }
+        }
+      },
+      "type": "people"
+    },
+    {
+      "id": "Maria",
+      "links": {
+        "self": "/people/Maria"
+      },
+      "relationships": {
+        "children": {
+          "data": [
+            {
+              "id": "Eva",
+              "type": "people"
+            },
+            {
+              "id": "Roman-younger",
+              "type": "people"
+            }
+          ],
+          "links": {
+            "related": "/people/Maria/children"
+          }
+        },
+        "tasks": {
+          "links": {
+            "related": "/people/Maria/tasks"
+          }
+        }
+      },
+      "type": "people"
+    },
+    {
+      "id": "Roman-younger",
+      "links": {
+        "self": "/people/Roman-younger"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "/people/Roman-younger/children"
+          }
+        },
+        "tasks": {
+          "links": {
+            "related": "/people/Roman-younger/tasks"
+          }
+        }
+      },
+      "type": "people"
+    },
+    {
+      "id": "Roman-older",
+      "links": {
+        "self": "/people/Roman-older"
+      },
+      "relationships": {
+        "children": {
+          "data": [
+            {
+              "id": "Iryna",
+              "type": "people"
+            },
+            {
+              "id": "Yuriy",
+              "type": "people"
+            }
+          ],
+          "links": {
+            "related": "/people/Roman-older/children"
+          }
+        },
+        "tasks": {
+          "links": {
+            "related": "/people/Roman-older/tasks"
+          }
+        }
+      },
+      "type": "people"
+    },
+    {
+      "id": "Sofia",
+      "links": {
+        "self": "/people/Sofia"
+      },
+      "relationships": {
+        "children": {
+          "links": {
+            "related": "/people/Sofia/children"
+          }
+        },
+        "tasks": {
+          "links": {
+            "related": "/people/Sofia/tasks"
+          }
+        }
+      },
+      "type": "people"
+    },
+    {
+      "id": "bring Eva to Kindergarten",
+      "links": {
+        "self": "/tasks/bring%20Eva%20to%20Kindergarten"
+      },
+      "type": "tasks"
+    }
+  ]
+}

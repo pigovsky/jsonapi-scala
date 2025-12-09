@@ -26,7 +26,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 package com.qvantel.jsonapi
 
+import com.qvantel.jsonapi.Deduplicator.JsObjectOps
 import org.scalacheck.Gen
+import spray.json.{JsArray, JsObject, JsString, JsValue}
+
+import scala.io.Source
 
 object Helpers {
   val genInclude     = Gen.listOf(Gen.alphaStr).map(_.mkString(".").toLowerCase)
@@ -35,4 +39,19 @@ object Helpers {
   def makeGenInclude(filter: String*) =
     Gen.listOf(Gen.alphaStr).map(_.mkString(".").toLowerCase).suchThat(x => !filter.forall(_.startsWith(x)))
   def makeGenIncludeList(filter: String*) = Gen.containerOf[List, String](makeGenInclude(filter: _*))
+
+  def readStrFromFile(filePath: String): String = {
+    val source = Source.fromResource(filePath)
+    try source.mkString
+    finally source.close()
+  }
+
+  def sortAllArraysById(jsVal: JsValue): JsValue = jsVal match {
+    case JsArray(elements) => JsArray(elements.map(sortAllArraysById).sortBy(e => Deduplicator.idType(e.asJsObject)))
+    case JsObject(fields) => JsObject(
+      fields.map{case (k,v) => k -> sortAllArraysById(v)}
+    ).sorted
+    case x => x
+  }
+
 }
